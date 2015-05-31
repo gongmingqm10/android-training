@@ -5,4 +5,9 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_action_button">Action Button</string>
     <string name="action_search">Search</string>
+    <string name="tab_a">TAB A</string>
+    <string name="tab_b">TAB B</string>
+    <string name="tab_c">TAB C</string>
+    <string name="tab_d">TAB D</string>
+    <string name="share">Share</string>
 </resources>

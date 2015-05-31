@@ -19,6 +19,7 @@
         <activity
             android:name=".activity.ActionButtonActivity"
             android:label="@string/title_activity_action_button"
+            android:uiOptions="splitActionBarWhenNarrow"
             android:parentActivityName=".activity.MainActivity">
         </activity>
     </application>

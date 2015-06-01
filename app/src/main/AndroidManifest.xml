@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".TrainingApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
@@ -17,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.ActionButtonActivity"
+            android:name=".activity.ActionTabActivity"
             android:label="@string/title_activity_action_button"
             android:uiOptions="splitActionBarWhenNarrow"
             android:parentActivityName=".activity.MainActivity">

@@ -3,6 +3,7 @@ package net.gongmingqm10.training.activity;
 import android.content.Intent;
 import android.provider.Settings;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -12,13 +13,29 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import net.gongmingqm10.training.R;
+import net.gongmingqm10.training.adapter.TabPagerAdapter;
 
-public class ActionButtonActivity extends AppCompatActivity {
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
+public class ActionTabActivity extends AppCompatActivity {
+
+    @InjectView(R.id.view_pager)
+    protected ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_button);
+
+        ButterKnife.inject(this);
+        initViewPager();
+    }
+
+    private void initViewPager() {
+        TabPagerAdapter pagerAdapter = new TabPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
     }
 
     @Override
@@ -43,13 +60,13 @@ public class ActionButtonActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(ActionButtonActivity.this, "Text submit event: " + query, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActionTabActivity.this, "Text submit event: " + query, Toast.LENGTH_SHORT).show();
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                Toast.makeText(ActionButtonActivity.this, "Text change event: " + newText, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActionTabActivity.this, "Text change event: " + newText, Toast.LENGTH_SHORT).show();
                 return false;
             }
         });

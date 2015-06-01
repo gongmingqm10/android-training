@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this, this);
+        ButterKnife.inject(this);
         inflateListView();
     }
 
     private void inflateListView() {
         String[] texts = new String[]{
-                "ActionBar Buttons"
+                "ActionBar Tab Fragment"
         };
         featureList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts));
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void openPage(int position) {
         switch(position) {
             case 0:
-                startActivity(new Intent(this, ActionButtonActivity.class));
+                startActivity(new Intent(this, ActionTabActivity.class));
                 break;
             default:
                 break;

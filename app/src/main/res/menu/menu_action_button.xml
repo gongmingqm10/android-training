@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="net.gongmingqm10.training.activity.ActionButtonActivity">
+    tools:context="net.gongmingqm10.training.activity.ActionTabActivity">
     <item android:id="@+id/action_search"
         android:title="@string/action_search"
         android:icon="@mipmap/ic_action_search"
@@ -13,11 +13,5 @@
         app:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
-    <item android:id="@+id/action_tab_a"
-        android:title="@string/tab_a"
-        app:showAsAction="never" />
-    <item android:id="@+id/action_tab_b"
-        android:title="@string/tab_b"
         app:showAsAction="never" />
 </menu>

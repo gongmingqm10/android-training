@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void inflateListView() {
         String[] texts = new String[]{
-                "ActionBar Tab Fragment"
+                "ActionBar Tab Fragment",
+                "Dynamic Fragment",
+                "Communicate with Fragments"
         };
         featureList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts));
 
@@ -38,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         switch(position) {
             case 0:
                 startActivity(new Intent(this, ActionTabActivity.class));
+                break;
+            case 1:
+                startActivity(new Intent(this, FragmentDynamicActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(this, FragmentCommunicateActivity.class));
                 break;
             default:
                 break;

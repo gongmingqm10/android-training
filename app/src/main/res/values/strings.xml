@@ -16,4 +16,10 @@
     <string name="fragment_a_title">Fragment A</string>
     <string name="fragment_b_title">Fragment B</string>
     <string name="fragment_c_title">Fragment C</string>
+    <string name="title_activity_fragment_sample">Fragment</string>
+    <string name="replace_fragment">Replace Fragment</string>
+    <string name="title_activity_fragment_communicate">Communicate</string>
+
+    <string name="send_message">Send Message</string>
+    <string name="message">Message</string>
 </resources>

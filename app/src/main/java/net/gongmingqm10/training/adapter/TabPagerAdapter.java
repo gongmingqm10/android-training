@@ -4,11 +4,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import net.gongmingqm10.training.R;
+import net.gongmingqm10.training.TrainingApp;
 import net.gongmingqm10.training.fragment.TabAFragment;
 import net.gongmingqm10.training.fragment.TabBFragment;
 import net.gongmingqm10.training.fragment.TabCFragment;
 
 public class TabPagerAdapter extends FragmentStatePagerAdapter {
+
+    private final int[] PAGE_TITLES = {R.string.fragment_a_title, R.string.fragment_b_title, R.string.fragment_c_title};
 
     public TabPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -35,4 +39,8 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
         return 3;
     }
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return TrainingApp.getInstance().getString(PAGE_TITLES[position]);
+    }
 }

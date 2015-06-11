@@ -11,7 +11,7 @@ import net.gongmingqm10.training.R;
 
 import butterknife.ButterKnife;
 
-public class TabAFragment extends Fragment{
+public class TabAFragment extends Fragment {
 
 
     @Nullable

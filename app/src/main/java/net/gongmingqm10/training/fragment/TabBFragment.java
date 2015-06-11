@@ -11,7 +11,7 @@ import net.gongmingqm10.training.R;
 
 import butterknife.ButterKnife;
 
-public class TabBFragment extends Fragment{
+public class TabBFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

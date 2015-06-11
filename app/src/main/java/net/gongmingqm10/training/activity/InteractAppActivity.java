@@ -3,11 +3,10 @@ package net.gongmingqm10.training.activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.provider.ContactsContract;
-import android.renderscript.Type;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -16,9 +15,6 @@ import android.widget.Toast;
 
 import net.gongmingqm10.training.R;
 
-import org.apache.http.protocol.HTTP;
-
-import java.net.HttpURLConnection;
 import java.util.Calendar;
 
 import butterknife.ButterKnife;
@@ -54,7 +50,7 @@ public class InteractAppActivity extends AppCompatActivity {
 
     @OnItemClick(R.id.actions_list)
     protected void onActionClick(int position) {
-        switch(position) {
+        switch (position) {
             case 0:
                 startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456789")));
                 break;
@@ -99,7 +95,7 @@ public class InteractAppActivity extends AppCompatActivity {
     private void startEmailIntent() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"gongmingqm10@foxmail.com"});
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"gongmingqm10@foxmail.com"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email Subject");
         intent.putExtra(Intent.EXTRA_TEXT, "This is the testing email from Android training");
 

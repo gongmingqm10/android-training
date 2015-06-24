@@ -78,7 +78,8 @@
         </activity>
         <activity
             android:name=".activity.MaterialCardActivity"
-            android:label="@string/title_activity_material_card" >
+            android:label="@string/title_activity_material_card"
+            android:parentActivityName=".activity.MainActivity" >
         </activity>
     </application>
 

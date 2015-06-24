@@ -15,6 +15,7 @@ import net.gongmingqm10.training.activity.CapturePhotoActivity;
 import net.gongmingqm10.training.activity.FragmentCommunicateActivity;
 import net.gongmingqm10.training.activity.FragmentDynamicActivity;
 import net.gongmingqm10.training.activity.InteractAppActivity;
+import net.gongmingqm10.training.activity.MaterialCardActivity;
 import net.gongmingqm10.training.activity.MaterialRecyclerActivity;
 import net.gongmingqm10.training.activity.ShareDataActivity;
 
@@ -84,6 +85,9 @@ public class MainFragment extends Fragment {
                 break;
             case 6:
                 startActivity(new Intent(getActivity(), MaterialRecyclerActivity.class));
+                break;
+            case 7:
+                startActivity(new Intent(getActivity(), MaterialCardActivity.class));
             default:
                 break;
         }

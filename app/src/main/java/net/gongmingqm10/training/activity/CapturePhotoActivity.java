@@ -46,7 +46,7 @@ public class CapturePhotoActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE & resultCode == RESULT_OK) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE & resultCode == RESULT_OK && data != null) {
             Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(imageBitmap);
             galleryAddFile();

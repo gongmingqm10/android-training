@@ -15,6 +15,7 @@ import net.gongmingqm10.training.activity.CapturePhotoActivity;
 import net.gongmingqm10.training.activity.FragmentCommunicateActivity;
 import net.gongmingqm10.training.activity.FragmentDynamicActivity;
 import net.gongmingqm10.training.activity.InteractAppActivity;
+import net.gongmingqm10.training.activity.MaterialRecyclerActivity;
 import net.gongmingqm10.training.activity.ShareDataActivity;
 
 import butterknife.ButterKnife;
@@ -53,7 +54,8 @@ public class MainFragment extends Fragment {
                 "Communicate with Fragments",
                 "Interact with Activity",
                 "Share Simple Data",
-                "Capturing Photos"
+                "Capturing Photos",
+                "Material Design"
         };
         featureList.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, texts));
     }
@@ -78,6 +80,9 @@ public class MainFragment extends Fragment {
                 break;
             case 5:
                 startActivity(new Intent(getActivity(), CapturePhotoActivity.class));
+                break;
+            case 6:
+                startActivity(new Intent(getActivity(), MaterialRecyclerActivity.class));
             default:
                 break;
         }

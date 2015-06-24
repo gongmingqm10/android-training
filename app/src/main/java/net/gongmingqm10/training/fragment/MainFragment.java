@@ -55,7 +55,8 @@ public class MainFragment extends Fragment {
                 "Interact with Activity",
                 "Share Simple Data",
                 "Capturing Photos",
-                "Material Design"
+                "Material RecyclerView",
+                "Material CardView"
         };
         featureList.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, texts));
     }

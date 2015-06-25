@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/main_fragment_item"
+            android:checked="true"
+            android:icon="@mipmap/ic_dashboard_black_24dp"
+            android:title="Home" />
+        <item android:id="@+id/a_fragment_item"
+            android:icon="@mipmap/ic_description_black_24dp"
+            android:title="Music" />
+        <item android:id="@+id/b_fragment_item"
+            android:icon="@mipmap/ic_bug_report_black_24dp"
+            android:title="Bug Report" />
+        <item android:id="@+id/c_fragment_item"
+            android:icon="@mipmap/ic_build_black_24dp"
+            android:title="Settings" />
+    </group>
+    <item android:title="Map">
+        <menu>
+            <item android:id="@+id/baidu_map"
+                android:icon="@mipmap/ic_description_black_24dp"
+                android:title="Baidu Map" />
+            <item android:id="@+id/google_map"
+                android:icon="@mipmap/ic_description_black_24dp"
+                android:title="Google Map" />
+        </menu>
+    </item>
+</menu>

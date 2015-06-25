@@ -81,6 +81,11 @@
             android:label="@string/title_activity_material_card"
             android:parentActivityName=".activity.MainActivity" >
         </activity>
+        <activity
+            android:name=".activity.MaterialTabActivity"
+            android:label="@string/title_activity_material_tab"
+            android:parentActivityName=".activity.MainActivity" >
+        </activity>
     </application>
 
 </manifest>

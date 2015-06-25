@@ -17,6 +17,7 @@ import net.gongmingqm10.training.activity.FragmentDynamicActivity;
 import net.gongmingqm10.training.activity.InteractAppActivity;
 import net.gongmingqm10.training.activity.MaterialCardActivity;
 import net.gongmingqm10.training.activity.MaterialRecyclerActivity;
+import net.gongmingqm10.training.activity.MaterialTabActivity;
 import net.gongmingqm10.training.activity.ShareDataActivity;
 
 import butterknife.ButterKnife;
@@ -49,6 +50,9 @@ public class MainFragment extends Fragment {
     }
 
     private void initListView() {
+        View headerView = getActivity().getLayoutInflater().inflate(R.layout.material_design_header, featureList, false);
+        featureList.addHeaderView(headerView);
+
         String[] texts = new String[]{
                 "ActionBar Tab Fragment",
                 "Dynamic Fragment",
@@ -57,14 +61,16 @@ public class MainFragment extends Fragment {
                 "Share Simple Data",
                 "Capturing Photos",
                 "Material RecyclerView",
-                "Material CardView"
+                "Material CardView",
+                "Material TabLayout",
+                "Material Coordinator"
         };
         featureList.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, texts));
     }
 
     @OnItemClick(R.id.list)
     protected void openPage(int position) {
-        switch (position) {
+        switch (position - 1) {
             case 0:
                 startActivity(new Intent(getActivity(), ActionTabActivity.class));
                 break;
@@ -88,6 +94,10 @@ public class MainFragment extends Fragment {
                 break;
             case 7:
                 startActivity(new Intent(getActivity(), MaterialCardActivity.class));
+                break;
+            case 8:
+                startActivity(new Intent(getActivity(), MaterialTabActivity.class));
+                break;
             default:
                 break;
         }

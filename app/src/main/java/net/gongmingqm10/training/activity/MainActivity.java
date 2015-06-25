@@ -2,12 +2,15 @@ package net.gongmingqm10.training.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -72,18 +75,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 menuItem.setChecked(true);
+                drawerLayout.closeDrawer(navigationView);
                 switch (menuItem.getItemId()) {
                     case R.id.main_fragment_item:
-                        drawerItemClicked(0);
+                        updateFragment(0);
                         return true;
                     case R.id.a_fragment_item:
-                        drawerItemClicked(1);
+                        updateFragment(1);
                         return true;
                     case R.id.b_fragment_item:
-                        drawerItemClicked(2);
+                        updateFragment(2);
                         return true;
                     case R.id.c_fragment_item:
-                        drawerItemClicked(3);
+                        updateFragment(3);
                         return true;
                 }
                 return false;
@@ -111,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.floating_action_btn)
     protected void clickFAB(View view) {
-        Snackbar.make(findViewById(R.id.content_view), "This is the snack bar", Snackbar.LENGTH_SHORT)
+        Snackbar.make(findViewById(R.id.coordinator_view), "This is the snack bar", Snackbar.LENGTH_SHORT)
                 .setAction("Dismiss", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -121,14 +125,8 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    private void drawerItemClicked(int position) {
-        updateFragment(position);
-        drawerLayout.closeDrawer(navigationView);
-    }
-
     private void updateFragment(int position) {
         setTitle(drawerTitle[position]);
-
         Fragment fragment = getFragmentByIndex(position);
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
     }

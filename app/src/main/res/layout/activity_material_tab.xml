@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="net.gongmingqm10.training.activity.MaterialTabActivity">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/color_primary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:tabTextColor="@color/blue_thin"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        />
+    <RelativeLayout
+        android:id="@+id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+</LinearLayout>

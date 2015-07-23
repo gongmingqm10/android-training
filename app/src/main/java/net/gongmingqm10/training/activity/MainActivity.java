@@ -115,7 +115,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.floating_action_btn)
     protected void clickFAB(View view) {
-        Snackbar.make(findViewById(R.id.coordinator_view), "This is the snack bar", Snackbar.LENGTH_SHORT)
+        Snackbar.make(findViewById(R.id.coordinator_view),
+                "This item already has the label \"travel\". You can add a new label.",
+                Snackbar.LENGTH_SHORT)
                 .setAction("Dismiss", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

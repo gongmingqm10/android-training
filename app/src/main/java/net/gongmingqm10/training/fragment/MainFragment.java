@@ -16,6 +16,7 @@ import net.gongmingqm10.training.activity.FragmentCommunicateActivity;
 import net.gongmingqm10.training.activity.FragmentDynamicActivity;
 import net.gongmingqm10.training.activity.InteractAppActivity;
 import net.gongmingqm10.training.activity.MaterialCardActivity;
+import net.gongmingqm10.training.activity.MaterialDialogActivity;
 import net.gongmingqm10.training.activity.MaterialRecyclerActivity;
 import net.gongmingqm10.training.activity.MaterialTabActivity;
 import net.gongmingqm10.training.activity.ShareDataActivity;
@@ -63,7 +64,7 @@ public class MainFragment extends Fragment {
                 "Material RecyclerView",
                 "Material CardView",
                 "Material TabLayout",
-                "Material Coordinator"
+                "Material Dialog"
         };
         featureList.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, texts));
     }
@@ -97,6 +98,9 @@ public class MainFragment extends Fragment {
                 break;
             case 8:
                 startActivity(new Intent(getActivity(), MaterialTabActivity.class));
+                break;
+            case 9:
+                startActivity(new Intent(getActivity(), MaterialDialogActivity.class));
                 break;
             default:
                 break;

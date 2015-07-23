@@ -42,4 +42,5 @@
     <string name="title_activity_material_card">Material Card</string>
     <string name="title_activity_material_tab">Material Tab</string>
     <string name="title_activity_material_app_bar">App Bar</string>
+    <string name="title_activity_material_dialog">Dialog</string>
 </resources>
